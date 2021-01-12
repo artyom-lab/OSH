@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+* {
+  outline: none !important; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+a {
+  text-decoration: none !important;
+  transition: 0.3s; }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #181B31; }
+
+.bg-blue {
+  background: #05385C; }
+
+.bg-pink {
+  background: #FF8080; }
+
+.blue {
+  color: #05385C; }
+
+.pink {
+  color: #FF8080; }
+
+.gray {
+  color: #707070; }
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1120px; } }
+
+.row-1 {
+  margin-left: -8px;
+  margin-right: -8px; }
+  .row-1 > [class*='col'] {
+    padding-left: 8px;
+    padding-right: 8px; }
+
+@media (min-width: 1200px) {
+  .row-2 {
+    margin-left: -22px;
+    margin-right: -22px; }
+    .row-2 > [class*='col'] {
+      padding-left: 22px;
+      padding-right: 22px; } }
+.h1, h1 {
+  font-weight: 600;
+  font-size: 60px; }
+  @media (max-width: 1199.98px) {
+    .h1, h1 {
+      font-size: 50px; } }
+  @media (max-width: 575.98px) {
+    .h1, h1 {
+      font-size: 30px; } }
+
+.h2, h2 {
+  font-weight: 600;
+  font-size: 40px; }
+  @media (max-width: 575.98px) {
+    .h2, h2 {
+      font-size: 26px; } }
+
+.h4, h4 {
+  font-weight: 600;
+  font-size: 20px; }
+
+.fz-14 {
+  font-size: 14px; }
+
+.fz-15 {
+  font-size: 15px; }
+
+.fz-18 {
+  font-size: 18px; }
+
+.fz-23 {
+  font-size: 23px; }
+
+.fz-32 {
+  font-size: 32px; }
+  @media (max-width: 575.98px) {
+    .fz-32 {
+      font-size: 26px; } }
+
+.fw-500 {
+  font-weight: 500; }
+
+.header {
+  overflow: hidden;
+  color: #fff; }
+  .header > .container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 75px; }
+    .header > .container .my-auto {
+      padding-top: 95px;
+      padding-bottom: 185px; }
+      @media (max-width: 575.98px) {
+        .header > .container .my-auto {
+          padding-top: 40px;
+          padding-bottom: 202px; } }
+
+.o-hidden {
+  overflow: hidden; }
+
+main {
+  z-index: 2;
+  position: relative;
+  background: #FFF; }
+
+.btn-my {
+  border-radius: 4px;
+  padding: 17px 17px 17px 19px;
+  border: none;
+  position: relative;
+  font-weight: bold;
+  box-shadow: none !important;
+  font-size: 17px;
+  background: #FD8080;
+  color: #FFF; }
+  .btn-my span {
+    vertical-align: middle; }
+  .btn-my:after {
+    content: "";
+    display: inline-block;
+    font-size: 0;
+    width: 7px;
+    height: 12px;
+    background-size: cover;
+    margin-left: 22px;
+    vertical-align: middle;
+    transition: 0.3s;
+    background-image: url(../img/arrow-white.svg); }
+  .btn-my:hover {
+    color: #FFF; }
+    .btn-my:hover:before {
+      transform: none; }
+    .btn-my:hover:after {
+      transform: translateX(-5px); }
+  .btn-my:active:after {
+    transform: translateX(5px); }
+
+.btn-inside {
+  display: inline-block;
+  position: relative;
+  margin-left: 10px; }
+  .btn-inside:before {
+    content: "";
+    position: absolute;
+    border-radius: 4px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid transparent;
+    transition: 0.3s;
+    transform: translate(-10px, 10px);
+    z-index: -1;
+    border-color: #FD8080; }
+  .btn-inside:hover:before {
+    transform: none; }
+
+@media (min-width: 1200px) {
+  .w-312 {
+    width: 312px; } }
+.section-1 .container {
+  margin-top: -100px; }
+  .section-1 .container .card-1 {
+    height: 100%;
+    padding: 32px 14px;
+    border-radius: 0 !important;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16); }
+  .section-1 .container [class^="col"]:first-child .card-1 {
+    border-top-left-radius: 4px !important;
+    border-bottom-left-radius: 4px !important; }
+  .section-1 .container [class^="col"]:last-child .card-1 {
+    border-top-right-radius: 4px !important;
+    border-bottom-right-radius: 4px !important; }
+  .section-1 .container .card-2 {
+    height: 100%;
+    padding: 30px 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    transition: 0.6s; }
+    .section-1 .container .card-2:hover {
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.07); }
+    .section-1 .container .card-2 a {
+      position: relative; }
+      .section-1 .container .card-2 a:after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0px;
+        width: 0;
+        border-bottom: 1px solid #FF8080;
+        transition: 0.3s; }
+      .section-1 .container .card-2 a:hover {
+        color: #FF8080;
+        opacity: 0.6; }
+        .section-1 .container .card-2 a:hover:after {
+          width: 100%; }
+
+@media (min-width: 768px) {
+  .page-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0; } }
+.page-footer a {
+  color: #707070; }
+  .page-footer a:hover {
+    opacity: 0.6; }
+.page-footer .input-group {
+  height: 44px; }
+  .page-footer .input-group .form-control {
+    font-size: 14px;
+    height: 44px;
+    background: #F7F8FA; }
+    .page-footer .input-group .form-control:focus {
+      box-shadow: none;
+      border-color: #ced4da; }
+  .page-footer .input-group .btn-subscribe {
+    font-size: 14px;
+    background: #FF8080;
+    border-color: #FF8080;
+    color: #FFF;
+    transition: 0.3s; }
+    .page-footer .input-group .btn-subscribe:hover {
+      opacity: 0.6; }
+    .page-footer .input-group .btn-subscribe:focus {
+      box-shadow: none; }
+  .page-footer .input-group .input-group-prepend span.btn {
+    border: 1px solid #ced4da; }
+  .page-footer .input-group .input-group-prepend span img {
+    height: 30px; }
+
+.footer-bottom {
+  background: #FF8080;
+  color: #FFF;
+  margin-top: 24px; }
+  .footer-bottom a {
+    color: #FFF; }
+
+.section-2 {
+  background: #F4F5F8; }
+
+/*# sourceMappingURL=style.css.map */

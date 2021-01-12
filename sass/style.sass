@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap')
+
+* 
+	outline: none !important
+
+img 
+	max-width: 100%
+	height: auto
+
+a 
+	text-decoration: none !important
+	transition: .3s
+
+body 
+	font-family: 'Montserrat', sans-serif
+	color: #181B31
+
+.bg-blue 
+	background: #05385C
+
+.bg-pink 
+	background: #FF8080
+
+.blue 
+	color: #05385C
+
+.pink 
+	color: #FF8080
+
+.gray 
+	color: #707070
+
+.container 
+	@media (min-width: 1200px)
+		max-width: 1120px
+
+.row-1
+	margin-left: -8px
+	margin-right: -8px
+	> [class*='col']
+		padding-left: 8px
+		padding-right: 8px
+
+@media (min-width: 1200px)
+	.row-2
+		margin-left: -22px
+		margin-right: -22px
+		> [class*='col']
+			padding-left: 22px
+			padding-right: 22px
+
+.h1, h1
+	font-weight: 600
+	font-size: 60px
+	@media (max-width: 1199.98px)
+		font-size: 50px
+	@media (max-width: 575.98px)
+		font-size: 30px
+
+.h2, h2
+	font-weight: 600
+	font-size: 40px
+	@media (max-width: 575.98px)
+		font-size: 26px
+
+.h4, h4
+	font-weight: 600
+	font-size: 20px
+
+.fz-14
+	font-size: 14px
+.fz-15
+	font-size: 15px
+.fz-18
+	font-size: 18px
+.fz-23
+	font-size: 23px
+.fz-32
+	font-size: 32px
+	@media (max-width: 575.98px)
+		font-size: 26px
+
+.fw-500
+	font-weight: 500
+
+.header 
+	overflow: hidden
+	color: #fff
+	> .container
+		display: flex
+		flex-direction: column
+		padding-top: 75px
+		.my-auto
+			padding-top: 95px
+			padding-bottom: 185px
+			@media (max-width: 575.98px)
+				padding-top: 40px
+				padding-bottom: 202px
+
+.o-hidden
+	overflow: hidden
+
+main 
+	z-index: 2
+	position: relative
+	background: #FFF
+
+.btn-my
+	border-radius: 4px
+	padding: 17px 17px 17px 19px
+	border: none
+	position: relative
+	font-weight: bold
+	box-shadow: none !important
+	font-size: 17px
+	background: #FD8080
+	color: #FFF
+	span 
+		vertical-align: middle
+	&:after 
+		content: ''
+		display: inline-block
+		font-size: 0
+		width: 7px
+		height: 12px
+		background-size: cover
+		margin-left: 22px
+		vertical-align: middle
+		transition: .3s
+		background-image: url(../img/arrow-white.svg)
+	&:hover 
+		color: #FFF
+		&:before 	
+			transform: none
+		&:after 
+			transform: translateX(-5px)
+	&:active
+		&:after 
+			transform: translateX(5px)
+
+.btn-inside
+	display: inline-block
+	position: relative
+	margin-left: 10px
+	&:before 
+		content: ''
+		position: absolute
+		border-radius: 4px
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		border: 1px solid transparent
+		transition: .3s
+		transform: translate(-10px, 10px)
+		z-index: -1
+		border-color: #FD8080
+	&:hover
+		&:before 	
+			transform: none
+
+@media (min-width: 1200px)
+	.w-312
+		width: 312px
+
+.section-1
+	.container
+		margin-top: -100px
+		.card-1 
+			height: 100%
+			padding: 32px 14px
+			border-radius: 0 !important
+			box-shadow: 0 3px 6px rgba(0, 0, 0, .16)
+		[class^="col"]
+			&:first-child 
+				.card-1
+					border-top-left-radius: 4px !important
+					border-bottom-left-radius: 4px !important
+			&:last-child 
+				.card-1
+					border-top-right-radius: 4px !important
+					border-bottom-right-radius: 4px !important
+		.card-2
+			height: 100%
+			padding: 30px 20px
+			box-shadow: 0 3px 6px rgba(0, 0, 0, .16)
+			transition: .6s
+			&:hover 
+				box-shadow: 0 25px 70px rgba(0,0,0,.07)
+			a 
+				position: relative
+				&:after 
+					content: ""
+					position: absolute
+					bottom: -4px
+					left: 0px
+					width: 0
+					border-bottom: 1px solid #FF8080
+					transition: 0.3s
+				&:hover 
+					color: #FF8080
+					opacity: .6
+					&:after 
+						width: 100%
+
+.page-footer 
+	@media (min-width: 768px)
+		position: fixed
+		bottom: 0
+		left: 0
+		right: 0
+	a 
+		color: #707070
+		&:hover 
+			opacity: .6
+	.input-group 
+		height: 44px
+		.form-control 
+			font-size: 14px
+			height: 44px
+			background: #F7F8FA
+			&:focus 
+				box-shadow: none
+				border-color: #ced4da
+		.btn-subscribe
+			font-size: 14px
+			background: #FF8080
+			border-color: #FF8080
+			color: #FFF
+			transition: .3s
+			&:hover 
+				opacity: .6
+			&:focus 
+				box-shadow: none
+		.input-group-prepend
+			span 
+				&.btn 
+					border: 1px solid #ced4da
+				img 
+					height: 30px
+
+.footer-bottom 
+	background: #FF8080
+	color: #FFF
+	margin-top: 24px
+	a 
+		color: #FFF
+
+.section-2 
+	background: #F4F5F8
