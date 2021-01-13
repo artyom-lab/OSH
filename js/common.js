@@ -1,5 +1,20 @@
 $(document).ready(function () {
 
+	$(".navbar-toggler").on("click", function() {
+		$(this).toggleClass("active");
+		$("body").toggleClass("menubar-in");
+	});
+
+	function navbar() {
+	if ($(this).scrollTop() >= 1) {
+		$('.fixed-top').addClass("navbar-bg");
+	} else {
+		$('.fixed-top').removeClass("navbar-bg");
+	};
+	};
+	navbar();
+	$(window).on("scroll", navbar);
+
 	AOS.init({
 		duration: 1000,
 		disable: 'mobile'
@@ -15,18 +30,12 @@ $(document).ready(function () {
 	footer();
 	$(window).on("resize", footer);
 
-	// $('.owl-1').owlCarousel({
- //    margin: 15,
- //    nav: false,
- //    dots: true,
- //    responsive: {
- //      0: {
- //        items: 1
- //      },
- //      576: {
- //        items: 2
- //      },
- //    }
-	// });
+  $(".owl-1").owlCarousel({
+    items: 1,
+    smartSpeed: 1000,
+    loop: true,
+    autoplay: true,
+    margin: 20
+  });
 
 });
